@@ -73,11 +73,11 @@ CFG_DEV_ID list
 
 full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/ath/ath9k/pci.c#L24
 */
-  parameter         CFG_VEND_ID        = 16'h168C,
-  parameter         CFG_DEV_ID         = 16'h002B,
-  parameter         CFG_REV_ID         =  8'h01,
-  parameter         CFG_SUBSYS_VEND_ID = 16'h168C,
-  parameter         CFG_SUBSYS_ID      = 16'h30A4,
+  parameter         CFG_VEND_ID        = 16'h10EC,
+  parameter         CFG_DEV_ID         = 16'h8168,
+  parameter         CFG_REV_ID         =  8'h15,
+  parameter         CFG_SUBSYS_VEND_ID = 16'h1043,
+  parameter         CFG_SUBSYS_ID      = 16'h8677,
   parameter         PCIE_ID_IF         ="TRUE", 
 
   parameter         EXT_PIPE_SIM = "FALSE",
@@ -93,16 +93,16 @@ full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/at
   parameter         AER_CAP_ON = "TRUE",
   parameter         AER_CAP_PERMIT_ROOTERR_UPDATE = "FALSE",
 
-  parameter [31:0]  BAR0 = 32'hFFE00000,
+  parameter [31:0]  BAR0 = 32'hFFFFFF00,
   parameter [31:0]  BAR1 = 32'h00000000,
-  parameter [31:0]  BAR2 = 32'h00000000,
+  parameter [31:0]  BAR2 = 32'hFFFFF004,
   parameter [31:0]  BAR3 = 32'h00000000,
-  parameter [31:0]  BAR4 = 32'h00000000,
-  parameter [31:0]  BAR5 = 32'h00000000,
+  parameter [31:0]  BAR4 = 32'hFFFFC004,
+  parameter [31:0]  BAR5 = 32'hFFFFFFFF,
 
   parameter         C_DATA_WIDTH = 64,
   parameter [31:0]  CARDBUS_CIS_POINTER = 32'h00000000,
-  parameter [23:0]  CLASS_CODE = 24'h028000,
+  parameter [23:0]  CLASS_CODE = 24'h020000,
   parameter         CMD_INTX_IMPLEMENTED = "TRUE",
   parameter         CPL_TIMEOUT_DISABLE_SUPPORTED = "TRUE",
   parameter [3:0]   CPL_TIMEOUT_RANGES_SUPPORTED = 4'h1,
@@ -170,7 +170,7 @@ full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/at
   parameter [10:0]  MSIX_CAP_TABLE_SIZE = 11'h000,
 
   parameter [3:0]   PCIE_CAP_DEVICE_PORT_TYPE = 4'h1,
-  parameter [7:0]   PCIE_CAP_NEXTPTR = 8'h00,
+  parameter [7:0]   PCIE_CAP_NEXTPTR = 8'hB0,
 
   parameter         PM_CAP_DSI = "FALSE",
   parameter         PM_CAP_D1SUPPORT = "TRUE",
@@ -288,8 +288,8 @@ full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/at
 
   parameter [7:0]   MSI_BASE_PTR = 8'h50,
   parameter [7:0]   MSI_CAP_ID = 8'h05,
-  parameter [7:0]   MSI_CAP_NEXTPTR = 8'h60,
-  parameter [7:0]   MSIX_BASE_PTR = 8'h9C,
+  parameter [7:0]   MSI_CAP_NEXTPTR = 8'h70,
+  parameter [7:0]   MSIX_BASE_PTR = 8'hB0,
   parameter [7:0]   MSIX_CAP_ID = 8'h11,
   parameter [7:0]   MSIX_CAP_NEXTPTR =8'h00,
 
@@ -298,7 +298,7 @@ full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/at
   parameter         N_FTS_GEN1 = 255,
   parameter         N_FTS_GEN2 = 255,
 
-  parameter [7:0]   PCIE_BASE_PTR = 8'h60,
+  parameter [7:0]   PCIE_BASE_PTR = 8'h70,
   parameter [7:0]   PCIE_CAP_CAPABILITY_ID = 8'h10,
   parameter [3:0]   PCIE_CAP_CAPABILITY_VERSION = 4'h2,
   parameter         PCIE_CAP_ON = "TRUE",
