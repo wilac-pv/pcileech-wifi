@@ -96,7 +96,7 @@ full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/at
   parameter [31:0]  BAR0 = 32'hFFFFFF00,
   parameter [31:0]  BAR1 = 32'h00000000,
   parameter [31:0]  BAR2 = 32'hFFFFF004,
-  parameter [31:0]  BAR3 = 32'h00000000,
+  parameter [31:0]  BAR3 = 32'hFFFFFFFF,
   parameter [31:0]  BAR4 = 32'hFFFFC004,
   parameter [31:0]  BAR5 = 32'hFFFFFFFF,
 
@@ -162,7 +162,7 @@ full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/at
   parameter         MSI_CAP_PER_VECTOR_MASKING_CAPABLE = "FALSE",
   parameter         MSI_CAP_64_BIT_ADDR_CAPABLE = "FALSE",
 
-  parameter         MSIX_CAP_ON = "FALSE",
+  parameter         MSIX_CAP_ON = "TRUE",
   parameter         MSIX_CAP_PBA_BIR = 0,
   parameter [28:0]  MSIX_CAP_PBA_OFFSET = 29'h0,
   parameter         MSIX_CAP_TABLE_BIR = 0,
@@ -173,7 +173,7 @@ full list: https://github.com/torvalds/linux/blob/master/drivers/net/wireless/at
   parameter [7:0]   PCIE_CAP_NEXTPTR = 8'hB0,
 
   parameter         PM_CAP_DSI = "FALSE",
-  parameter         PM_CAP_D1SUPPORT = "TRUE",
+  parameter         PM_CAP_D1SUPPORT = "TRUE", 
   parameter         PM_CAP_D2SUPPORT = "FALSE",
   parameter [7:0]   PM_CAP_NEXTPTR = 8'h50,
   parameter [4:0]   PM_CAP_PMESUPPORT = 5'h0B,
